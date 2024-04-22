@@ -142,7 +142,7 @@ fi
 if (($(pgrep -c "spamd") > 0)); then
     SPAMASSASSIN=$RUNNING
 fi
-if (($(pgrep -c "clamav") > 0)); then
+if (($(pgrep -c "clamav") > 0)) || (($(pgrep -c "clamd") > 0)); then
     CLAMAV=$RUNNING
 fi
 if (($(pgrep -c "dovecot") > 0)); then
